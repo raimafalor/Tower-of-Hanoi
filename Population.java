@@ -54,26 +54,37 @@ public class Population {
 
 		switch (choice) {
 			case 1:
+				System.out.println("Fifty least populous cities");
+				System.out.println();
 				sortMethods.selectionSortByPopulationAsc(pop.cities);
 				print50(pop.cities);
 				break;
 
 			case 2:
+
+				System.out.println("Fifty most populous cities");
+				System.out.println();
 				sortMethods.mergeSortByPopulationDesc(pop.cities);
 				print50(pop.cities);
 				break;
 
 			case 3:
+			System.out.println("Fifty cities sorted by name");
+			System.out.println();
 				sortMethods.insertionSortByNameAsc(pop.cities);
 				print50(pop.cities);
 				break;
 
 			case 4:
+			System.out.println("Fifty cities sorted by name descending");
+				System.out.println();
 				sortMethods.mergeSortByNameDesc(pop.cities);
 				print50(pop.cities);
 				break;
 
 			case 5:
+			System.out.println("Fifty cities sorted by name descending");
+				System.out.println();
 				pop.mostPopulousOfState(pop.states, pop.cities);
 				takeTurn(pop);
 				break;
@@ -90,6 +101,7 @@ public class Population {
 
 			default:
 				System.out.println("That is not a valid choice!");
+				takeTurn(pop);
 				break;
 		}
 		long endMillisec = System.currentTimeMillis();
@@ -147,6 +159,8 @@ public class Population {
 			}
 		}
 		sortMethods.insertionSortByPopulationDesc(c);
+		System.out.println("Fifty most populous cities in " + state);
+		System.out.println();
 		print50(c);
 
 	}
