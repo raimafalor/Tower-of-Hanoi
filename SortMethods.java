@@ -110,7 +110,6 @@ public class SortMethods {
 	 */
 
 	public void mergeSortByPopulationDesc(List<City> arr) {
-		
 		popSort(arr, 0, arr.size() - 1);
 	}
 
